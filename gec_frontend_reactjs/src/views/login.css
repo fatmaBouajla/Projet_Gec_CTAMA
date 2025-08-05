@@ -1,0 +1,229 @@
+:root {
+    --primary-blue: #0056b3;
+    --secondary-blue: #003366;
+    --accent-orange: #e97d30;
+    --white: #ffffff;
+    --gray: #f8f9fa;
+    --dark-gray: #6c757d;
+    --light-gray: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 600px; 
+    background-color: var(--white);
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    overflow: hidden;
+    border-top: 8px solid var(--accent-orange); 
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px; 
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+}
+
+.logo-img {
+    height: 80px; 
+    margin-right: 25px;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-main {
+    font-size: 28px; 
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.logo-sub {
+    font-size: 16px; 
+    color: var(--secondary-blue);
+    letter-spacing: 0.5px;
+}
+
+.form-container {
+    padding: 40px; 
+}
+
+h1 {
+    color: var(--secondary-blue);
+    margin-bottom: 30px; 
+    font-size: 28px; 
+    text-align: center;
+    font-weight: 600;
+}
+
+h1 span {
+    color: var(--accent-orange);
+}
+
+.form-group {
+    margin-bottom: 25px; 
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; 
+    color: var(--secondary-blue);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 20px; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    font-size: 16px; 
+    transition: all 0.3s;
+    background-color: var(--gray);
+}
+
+input:focus {
+    border-color: var(--accent-orange);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(233, 125, 48, 0.2); 
+    background-color: var(--white);
+}
+.btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.btn:hover {
+    background-color: #d16b27;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(233, 125, 48, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px; 
+    font-size: 15px;
+}
+
+.links a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    padding: 5px 0;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #d16b27;
+}
+
+.alert {
+    padding: 15px; 
+    margin-bottom: 25px; 
+    text-align: center;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 95%;
+        border-radius: 12px;
+    }
+    
+    .logo-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .logo-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 70px;
+    }
+
+    .form-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-container {
+    animation: fadeIn 0.5s ease-out;
+}
+.rr{
+    font-size: 30px;
+}

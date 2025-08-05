@@ -1,0 +1,199 @@
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.user-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-card:hover {
+  border-color: #4a89dc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card.selected {
+  background-color: #f0f7ff;
+  border-color: #4a89dc;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.check-icon {
+  color: #4a89dc;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.role-badge.admin {
+  background-color: #e1f5fe;
+  color: #0288d1;
+}
+
+.role-badge.user {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.highlight {
+  color: #4a89dc;
+  font-weight: 500;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+.confirmation-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.confirmation-header {
+  margin-bottom: 2rem;
+}
+
+.success-icon {
+  color: #4CAF50;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 0.6s;
+}
+
+.confirmation-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.confirmation-details {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.detail-value {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.return-button {
+  background-color: #eb8f27;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #eeb879;
+  transform: translateY(-2px);
+}
+
+.return-icon {
+  margin-right: 0.5rem;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 2rem;
+  }
+  
+  .success-icon {
+    font-size: 4rem;
+  }
+  
+  .confirmation-header h2 {
+    font-size: 1.5rem;
+  }
+}
