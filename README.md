@@ -28,8 +28,8 @@
   - Utilisateur standard
 - Profils personnalisables
 
-### Fonctionnalités Avancées
+### Fonctionnalités 
 - Suivi en temps réel des statuts
-- Gestion des pièces jointes avec versionning
+- Gestion des pièces jointes 
 - Historique complet des actions 
 - Recherche full-text avec filtres multiples
